@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2 class="mb-4 pl-4"> {{ type }} </h2>
+<div class="col-md-12 mx-auto">
+    <ul>
+        {% if type == "Mapa" %}
+            <iframe src="{{ map_url }}" width="100%" height="500"></iframe>
+        {% endif %}
+    </ul>
+</div>
+
+{% endblock content %}
