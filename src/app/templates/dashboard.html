@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Proyecto: {{ proyecto }}</div>
+                <div class="card-body">
+                    <p class="card-text">Project Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Metadata</div>
+                <div class="card-body">
+                    <p class="card-text">Número de experimentos:</p>
+                    <p class="card-text">Número de prediciones:</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Data</div>
+                <div class="card-body">
+                    <p class="card-text">Gráfica de los datos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Tabla de datos</div>
+                <div class="card-body">
+                    <p class="card-text">Tabla de datos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
