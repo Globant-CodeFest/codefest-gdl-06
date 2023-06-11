@@ -15,12 +15,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template(
-        "dashboard.html",
-        type="Home",
-        proyecto="Industria",
-        description="Descripción del proyecto",
-    )
+    return render_template("login.html", type="Home", proyecto="Industria")
+
+@app.route("/dashboard", methods=['GET', 'POST'])
+def dashboard():
+    return render_template("dashboard.html", type="Home", proyecto="Industria")
+
 
 
 @app.route("/map")
