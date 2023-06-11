@@ -1,0 +1,98 @@
+{
+    "Cluster1": [
+      {
+        "Location": {
+          "Latitude": 37.7749,
+          "Longitude": -122.4194
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 40.7128,
+          "Longitude": -74.0060
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 34.0522,
+          "Longitude": -118.2437
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 41.8781,
+          "Longitude": -87.6298
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 51.5074,
+          "Longitude": -0.1276
+        }
+      }
+    ],
+    "Cluster2": [
+      {
+        "Location": {
+          "Latitude": 48.8566,
+          "Longitude": 2.3522
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 35.6895,
+          "Longitude": 139.6917
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 37.3382,
+          "Longitude": -121.8863
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 55.7558,
+          "Longitude": 37.6176
+        }
+      }
+    ],
+    "Cluster3": [
+      {
+        "Location": {
+          "Latitude": 22.9068,
+          "Longitude": -43.1729
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 1.3521,
+          "Longitude": 103.8198
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 51.5072,
+          "Longitude": -0.1276
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 28.6139,
+          "Longitude": 77.2090
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 35.6897,
+          "Longitude": 139.6922
+        }
+      },
+      {
+        "Location": {
+          "Latitude": 25.2048,
+          "Longitude": 55.2708
+        }
+      }
+    ]
+  }
