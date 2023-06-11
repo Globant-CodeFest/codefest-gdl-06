@@ -1,0 +1,72 @@
+[
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 25.5,
+      "Density": 0.85,
+      "Value": true
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 24.8,
+      "Density": 0.91,
+      "Value": false
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 26.2,
+      "Density": 0.78,
+      "Value": true
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 23.7,
+      "Density": 0.82,
+      "Value": false
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 24.9,
+      "Density": 0.88,
+      "Value": true
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 25.1,
+      "Density": 0.95,
+      "Value": false
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 26.5,
+      "Density": 0.79,
+      "Value": true
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 24.3,
+      "Density": 0.86,
+      "Value": false
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 25.7,
+      "Density": 0.92,
+      "Value": true
+    },
+    {
+      "Longitude": -122.4194,
+      "Latitude": 37.7749,
+      "Temperature": 26.0,
+      "Density": 0.81,
+      "Value": false
+    }
+  ]
