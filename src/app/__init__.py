@@ -1,4 +1,5 @@
 import os
+import json
 import statistics
 import tempfile
 
@@ -14,7 +15,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("dashboard.html", type="Home", proyecto="Industria")
+    return render_template(
+        "dashboard.html",
+        type="Home",
+        proyecto="Industria",
+        description="Descripción del proyecto",
+    )
 
 
 @app.route("/map")
@@ -71,11 +77,43 @@ def create_map(locations):
             coordinates_str[i], popup=location.city_name, tooltip=tooltip
         ).add_to(m)
     # add geojson data
-    df = geopandas.read_file(
-        url_for("static", filename="geojson/stations.geojson", _external=True)
-    )
+    filename = make_geojson()
+    df = geopandas.read_file(filename=filename)
 
     folium.GeoJson(df, name="geojson").add_to(m)
     with tempfile.NamedTemporaryFile(delete=False, suffix=".html") as map_file:
         m.save(map_file.name)
         return map_file.name
+
+
+def make_geojson():
+    # Create an empty list to store the polygon coordinates
+    polygon_features = []
+    # Iterate over the stations
+    for station in data["stations"]:
+        latitude = float(station["latitude"])
+        longitude = float(station["longitude"])
+
+        # Check if the polygon feature list is empty or if the current polygon has reached the maximum number of coordinates
+        if (
+            not polygon_features
+            or len(polygon_features[-1]["geometry"]["coordinates"][0]) >= 3
+        ):
+            # Create a new polygon feature
+            polygon_feature = {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {"coordinates": [[]], "type": "Polygon"},
+            }
+            polygon_features.append(polygon_feature)
+
+        # Add the current coordinate to the last polygon feature
+        polygon_features[-1]["geometry"]["coordinates"][0].append([longitude, latitude])
+
+    # Create the GeoJSON feature collection
+    geojson_data = {"type": "FeatureCollection", "features": polygon_features}
+
+    # Save the geojson data to a temporary file
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".geojson") as geojson_file:
+        geojson_file.write(json.dumps(geojson_data).encode("utf-8"))
+        return geojson_file.name
